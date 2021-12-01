@@ -1,22 +1,24 @@
+import React, { useState, useContext } from 'react';
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from './styles/theme';
+import GlobalTheme from './styles/globals';
+import themeContext  from './contexts/themeContext';
+
+import Routes from './routes';
+
+
 const App = () => {
+
+  // const theme = useContext(themeContext);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img  className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={lightTheme}>
+      <GlobalTheme />
+        <themeContext>
+          <Routes />
+        </themeContext>
+    </ThemeProvider>
   );
 }
 
-export default App;
+export default App
