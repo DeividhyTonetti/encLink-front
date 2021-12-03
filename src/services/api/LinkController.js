@@ -11,7 +11,7 @@ const genereteLink = async(data) => {
  
     return response.json();;
   } catch (error) {
-    console.log('Erro: ', error);
+    // Deveria setar o erro
   }
 }
 

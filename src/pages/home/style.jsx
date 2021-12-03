@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { Link } from "@styled-icons/boxicons-regular/Link";
 
-// import { createGlobalStyle } from "styled-components";
-
 const Container = styled.div``;
 
 const Content = styled.div`
@@ -104,6 +102,20 @@ const WelcomeText = styled.h1`
   margin: 0 0 1.5rem;
 `;
 
+const LinkGenerate = styled.div`
+  border-radius: 50px 0px 0px 50px;
+  border: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: #fff;
+  line-height: 50px;
+  font-size: 1rem;
+  outline: 0;
+  -webkit-appearance: none;
+  flex-basis: 100%;
+  width: 100%;
+`;
+
 export {
   ButtonChange,
   Container,
@@ -113,4 +125,5 @@ export {
   FlexForm,
   InputIcons,
   WelcomeText,
+  LinkGenerate,
 }
