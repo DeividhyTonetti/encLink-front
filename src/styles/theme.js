@@ -4,7 +4,7 @@ const lightTheme = {
     secondary: '',
   },
   background: '#292929',
-  text: "#202124",
+  text: "#999;",
 };
 
 const darkTheme = {
