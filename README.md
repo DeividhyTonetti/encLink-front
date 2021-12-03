@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+<h1 align="center">🔗 EncLink - Front-end</h1>
+<p align="center">Encurtador links, simples e objetivo.</p>
+<div align="center">
+  <img src="https://img.shields.io/static/v1?label=Licence&message=MIT&color=2874F0"/>
+  <img src="https://img.shields.io/static/v1?label=Node&message=>14.17&color=00C300"/>
+  <img src="https://img.shields.io/static/v1?label=NPM&message=>6.8&color=FF160B"/>
+  <img src="https://img.shields.io/static/v1?label=React&message=>17.0.2&color=7B68EE"/>
+  <img src="https://img.shields.io/static/v1?label=styled-components&message=V6&color=FFE005"/>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!--ts-->
+   * [Pré Requisitos](#pre-requisitos)
+   * [Instalação](#instalacao)
+      * [Clonando o repositório](#clone-repositorio)
+      * [Navegando entre diretórios](#navegacao)
+      * [Criando variáveis de ambiente](#dotenv)
+      * [Instalando as dependências](#dependencias)
+   * [Tecnologias](#tecnologias)
+   * [Trabalhos Futuros](#trabalhos-futuros)
+<!--te-->
 
-## Available Scripts
+<h4 align="center"> 
+	🚧  EncLink 🚀 Em Fase Final...  🚧
+</h4>
 
-In the project directory, you can run:
+# Pré-requisitos
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com) e
+[Node.js](https://nodejs.org/en/),
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-### `npm start`
+# Instalação
+## Clone este repositório
+$ git clone <https://github.com/DeividhyTonetti/encLink-front.git>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Navegue até a pasta do projeto via terminal terminal/cmd
+$ cd (diretórtio...)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Crie um arquivo chamado .env na raiz do projeto e insira as seguintes variáveis de ambiente:
+  
+### Pota
+    PORT= Número da porta - Exemplo: PORT=3001
+  
+### Name
+    REACT_APP_BASE_URL=http://localhost:PORTA_DO_SERVIDOR
+  
+# Instale as dependências do projeto
+$ npm install
 
-### `npm test`
+# Execute a aplicação em modo de desenvolvimento
+$ npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# O servidor inciará na porta que você escolheu
+Acesse no seu navegador <http://localhost:PORTA>
+  
+### 🛠 Tecnologias
 
-### `npm run build`
+As seguintes ferramentas e bibliotecas foram usadas na construção do projeto:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [React](https://pt-br.reactjs.org/docs/getting-started.html)
+- [Styled-components](https://styled-components.com/docs)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Autor
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<a href="https://www.linkedin.com/in/deividhytonetti6/">
+ <img style="border-radius: 50%;" src=https://avatars.githubusercontent.com/u/34030150?s=96&v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Deividhy Tonetti</b></sub></a> <a href="https://github.com/DeividhyTonetti" title="Rocketseat">🚀</a>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Feito com ❤️ por Deividhy J. Tonetti 👋🏽 Entre em contato!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![Linkedin Badge](https://img.shields.io/badge/-Deividhy-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/deividhytonetti6/)](https://www.linkedin.com/in/deividhytonetti6/) 
+[![Hotmail Badge](https://img.shields.io/badge/-deividhytonetti@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:deividhytonetti@gmail.com)](mailto:deividhytonetti@gmail.com)
