@@ -11,7 +11,7 @@ const genereteLink = async(data) => {
  
     return response.json();;
   } catch (error) {
-    // Deveria setar o erro
+    // Deveria setar o erro e retornar para a camada superior.
   }
 }
 

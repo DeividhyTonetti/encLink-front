@@ -5,7 +5,7 @@ import SnackBar from '../../components/Snackbar';
 
 const Home = () => {
   const [url, setUrl] = useState('');
-  // const [open, setOpen] = useState({ open: false, message: '' });
+  const [open, setOpen] = useState({ status: false, message: '', color: true });
   const [newLink, setNewLink] = useState(null);
   const [button, setButton] = useState({ type: 'Sorten', message: 'Sorten Link' });
 
@@ -14,18 +14,37 @@ const Home = () => {
     setUrl(value);
   }
 
+  const urlValitatation = (string) => {
+    let url;
+    
+    try {
+      url = new URL(string);
+    } catch (_) {
+      return false;  
+    }
+  
+    return url.protocol === "http:" || url.protocol === "https:";
+  }
   const handleClick = async () => {
-    const response = await genereteLink(url);
-    if(response){
-      setNewLink(response);
-      setButton({ type: 'Copy', message: 'Copy Link' });
+    if(urlValitatation(url)) {
+      const response = await genereteLink(url);
+      
+      console.log("ENTREI AQUI");
+      if(!response.message) {
+        setNewLink(response);
+        setButton({ type: 'Copy', message: 'Copy Link' });
+        setOpen({ ...open, status: true, message: 'Link generated successfully' });
+      }
+    } else {
+      console.log("ENTREI AQUI2");
+      setOpen({ status: true, message: 'Invalid link', color: false });
     }
   }
 
   const handClickCopyLink = () => {
     navigator.clipboard.writeText(newLink);
     setUrl('');
-    setNewLink(''); // PODIA SER O MESMO :/
+    setNewLink(''); // POderIA SER O MESMO :/
     setButton(({ type: 'Sorten', message: 'Sorten Link' }));
   }
 
@@ -44,12 +63,11 @@ const Home = () => {
                 onChange={handleLinkChange} 
               /> :
               <LinkGenerate> { newLink } </LinkGenerate>
-          }
-          
+          }         
           <ButtonChange type="submit" onClick={ button.type === 'Copy'? handClickCopyLink : handleClick } > { button.message } </ButtonChange>
         </FlexForm>
       </Content>
-      <SnackBar/>
+      <SnackBar open={open} setOpen={setOpen} />
     </Container>
   )
 }

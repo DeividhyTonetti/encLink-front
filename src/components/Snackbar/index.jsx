@@ -1,18 +1,21 @@
 import React from 'react';
-import { Content, SnackClose, Text, Card } from './styles';
+import { Card } from './styles';
 
-const Snackbar = ( ) => {
+const Snackbar = ({ open, setOpen } ) => {
+  if(open.status)
+    setTimeout(() => setOpen({ status: false, message: '', color: true }), 5000);
+
   return (
-    <Content>
-      <SnackClose />
-        <Text>
-          OLA QUE TAL
-        </Text>
-      <Card>
-        
-      </Card>
-    </Content>
-  )
+    <>
+      {
+        open.status? 
+          <Card isColored={open.color} >
+            { open.message }
+          </Card> :
+          null  
+      }
+    </>
+  );
 }
 
 export default Snackbar;
